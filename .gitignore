@@ -1,0 +1,8 @@
+
+target/
+dbt_packages/
+logs/
+.duckdb
+:memory
+duckdb.zip
+duckdb_jdbc-*.jar
