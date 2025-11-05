@@ -12,10 +12,10 @@ This dbt project transforms raw e-commerce data from the Jaffle Shop into clean,
 - **`fct_orders`**: One row per *completed* order with total payment amount (sum of all payment methods)
 
 #### Fact Orders
-![fct_orders](images/fct_orders img.png)
+![fct_orders](images/fct_orders.png)
 
 #### Customer Dimension
-![dim_customers](images/dim_customer png.png)
+![dim_customers](images/dim_customer.png)
 
 ### Staging Layer
 - `stg_customers`, `stg_orders`, `stg_payments`: Cleaned raw data with:
@@ -39,7 +39,7 @@ This dbt project transforms raw e-commerce data from the Jaffle Shop into clean,
 - Interactive data catalog generated with `dbt docs generate`: http://localhost:8080/#!/overview/jaffle_shop 
 - DAG shows clear lineage from raw → staging → marts
 
-![Data Pipeline](images/line graph jaffle_shop.png)
+![Data Pipeline](images/linegraphjaffle_shop.png)
 
 
 
@@ -47,19 +47,19 @@ This dbt project transforms raw e-commerce data from the Jaffle Shop into clean,
 
 jaffle_shop/
 ├── models/
-│   ├── staging/
-│   │   ├── stg_customers.sql
-│   │   ├── stg_orders.sql
-│   │   ├── stg_payments.sql
-│   │   └── schema.yml   ← your tests & docs
-│   └── marts/
-│       ├── dim_customers.sql
-│       └── fct_orders.sql
-└── seeds/
-    ├── raw_customers.csv
-    ├── raw_orders.csv
-    └── raw_payments.csv
-├── dbt_project.yml
+│ ├── staging/
+│ │ ├── stg_customers.sql
+│ │ ├── stg_orders.sql
+│ │ ├── stg_payments.sql
+│ │ └── schema.yml ← tests & docs
+│ └── marts/
+│ ├── dim_customers.sql
+│ └── fct_orders.sql
+├── seeds/
+│ ├── raw_customers.csv
+│ ├── raw_orders.csv
+│ └── raw_payments.csv
+└── dbt_project.yml
 
 
 
