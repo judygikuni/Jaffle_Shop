@@ -53,7 +53,7 @@ jaffle_shop/
 │ │ ├── stg_customers.sql
 │ │ ├── stg_orders.sql
 │ │ ├── stg_payments.sql
-│ │ └── schema.yml ← tests & docs
+│ │ └── schema.yml
 │ └── marts/
 │ ├── dim_customers.sql
 │ └── fct_orders.sql
