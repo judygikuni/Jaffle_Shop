@@ -34,17 +34,17 @@ This dbt project transforms raw e-commerce data from the Jaffle Shop into clean,
 - Run through: dbt test
 
 
-## 📚 Documentation
+##  Documentation
 - Full column and model descriptions in `schema.yml`
 - Interactive data catalog generated with `dbt docs generate`: http://localhost:8080/#!/overview/jaffle_shop 
-- DAG shows clear lineage from raw → staging → marts
+- DAG(Directed Acyclic Graph) shows clear lineage from raw → staging → marts
 
 ![Data Pipeline](images/linegraphjaffle_shop.png)
 
 
 
-## 🏗️ Project Structure
-
+## Project Structure
+```
 jaffle_shop/
 ├── models/
 │ ├── staging/
@@ -60,6 +60,6 @@ jaffle_shop/
 │ ├── raw_orders.csv
 │ └── raw_payments.csv
 └── dbt_project.yml
-
+```
 
 
