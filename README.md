@@ -27,11 +27,11 @@ This dbt project transforms raw e-commerce data from the Jaffle Shop into clean,
 
 ## Testing
 - **12 data tests** covering:
-  - Primary key uniqueness & not-null constraints
-  - Referential integrity (`fct_orders.customer_id` → `dim_customers`)
+  - Primary key uniqueness and not-null constraints for all models
+  - Relationship tests (`fct_orders.customer_id` → `dim_customers`)
   - Valid order statuses (`placed`, `shipped`, `completed`, `returned`, `return_pending`)
 - All tests pass
-- Run through: dbt test
+- Run through: `dbt test`
 
 
 ##  Documentation
