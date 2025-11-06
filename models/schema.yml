@@ -23,9 +23,9 @@ models:
           - unique
           - not_null
       - name: customer_id
-        description: "Foreign key to customer (renamed from 'user_id' in source)."
+        description: "Foreign key to customer renamed from 'user_id' in source."
       - name: order_date
-        description: "Date the order was placed (cast to DATE type)."
+        description: "Date the order was placed casted to DATE type."
       - name: status
         description: "Current status of the order."
         tests:
@@ -44,12 +44,12 @@ models:
       - name: order_id
         description: "Foreign key to the order this payment belongs to."
       - name: payment_method
-        description: "Method used for payment (e.g., credit_card, gift_card)."
+        description: "Method used for payment such as credit_card, gift_card."
       - name: amount
-        description: "Payment amount in USD (converted from cents in source)."
+        description: "Payment amount in USD converted from cents in source."
 
   - name: dim_customers
-    description: "Dimension table with customer info and order history metrics."
+    description: "Dimension table with customer information and order history metrics."
     columns:
       - name: customer_id
         description: "Unique customer identifier."

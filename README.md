@@ -4,24 +4,26 @@ This dbt project transforms raw e-commerce data from the Jaffle Shop into clean,
 
 ## Models
 
-### Marts Layer
-- **`dim_customers`**: One row per customer with order history metrics:
-  - `first_order_date`
-  - `most_recent_order_date`
-  - `number_of_orders`
-- **`fct_orders`**: One row per *completed* order with total payment amount (sum of all payment methods)
-
-#### Fact Orders
-![fct_orders](images/fct_orders.png)
-
-#### Customer Dimension
-![dim_customers](images/dim_customer.png)
-
 ### Staging Layer
-- `stg_customers`, `stg_orders`, `stg_payments`: Cleaned raw data with:
+- Transforming the messy raw data into clean and consistent data ready for business logic. 
+- Contains `stg_customers`, `stg_orders`, `stg_payments`: Cleaned raw data with:
   - Consistent naming (`id` → `customer_id`, etc.)
   - Type casting (`order_date` → `DATE`)
   - Unit conversion (`amount` from cents → dollars)
+
+
+### Marts Layer
+- **`dim_customers`**: Showing a summary of who the customer is and a summary of their behaviour. 
+One row per customer with order history metrics:
+  - `first_order_date`
+  - `most_recent_order_date`
+  - `number_of_orders`
+  ![dim_customers](images/dim_customer.png)
+
+
+- **`fct_orders`**: Shows the measurables in the data. 
+One row per *completed* order with total payment amount (sum of all payment methods)
+![fct_orders](images/fct_orders.png)
 
   
 
